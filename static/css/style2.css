@@ -1,0 +1,535 @@
+/* Styling for Assessments Page */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+html{
+    font-family: 'Inter', sans-serif;
+}
+/* NavBar Styling*/
+.nav-container-div{
+  padding-left: 4rem !important;
+  padding-right: 4rem !important;
+}
+
+.badge {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+  }
+  
+  .right-container {
+    display: flex;
+  }
+  
+  .search-div {
+    margin-right: 20px;
+  }
+  
+  .dropdown {
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 991px) {
+    .right-container {
+      flex-basis: 100%;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    .search-div {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .search-inp {
+    display: inline-block;
+    border: none;
+    outline: none;
+    font-size: large;
+    width: 220px;
+    color: #837C7C;
+          
+}
+.btn:hover{
+    border-color: #837C7C;
+}
+
+.userdropdown{
+    padding: 1px 15px 1px 7px;
+    /* border: 1px solid black; */
+    font-size: 13px;
+}
+
+.userdropdown:hover{
+  padding: 1px 15px 1px 7px;
+  /* border: 1px solid black; */
+  font-size: 13px;
+  border:none;
+}
+
+.custom-border {
+    border: none;
+    background-color: #FFFFFF;
+}
+
+/* Card Styling */
+
+.card-custom{
+    padding-top: 36px;
+    padding-bottom: 64px;
+    text-align: center;
+}
+
+.container-bg-color{
+    background-color: #10267e;
+    width: 100%;
+}
+
+.btn-custom{
+    background-color: #1f389a;
+    height: 30px;
+    width: 152px;
+    color: #ffffff;
+    box-shadow: 1px 2px 3px white;
+    font-weight: bold;
+}
+
+.card-body h6{
+    color: #c1bebe;
+}
+.card-body h5{
+    color: #4d4e52;
+    font-weight: normal;
+}
+
+.footer-div{
+    height:410px;
+    width:100%;
+    /* background-color: brown;  */
+    background-image: url('img/Group\ 179110.png');
+   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+   filter: grayscale(100%); 
+   color: #e3e3e3;
+   /* background-color: black; */
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+
+.copy-right{
+    background-color:#1f389a;
+    height:10vh;
+    text-align: center;
+    font-size: x-large;
+    color: #C0C1C5;
+    padding-top: 15px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+.arrow-btn{
+  border: 1px solid #9b9ea6;
+  border-radius: 100%;
+  padding: 5px 10px 5px 10px
+}
+
+.card-height{
+  height: 65vh;
+}
+
+.task-type-label {
+  display: block;
+  width: 50%;
+  font-size: 16px;
+  margin: 16px 0 0 2px;
+  padding: 12px;
+  display: block;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #e5e5e5;
+  color: #333;
+}
+
+.task_type {
+  display: none;
+}
+
+.user-dropdown{
+  border: 1px solid #918b8b;
+  border-radius: 30px;
+  padding: 1px 9px 1px 6px;
+}
+
+/* Quiz App Style */
+#quiz {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.answer-options {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+#submit,
+#retry {
+  display: block;
+  margin: 20px auto;
+  font-size: 14px;
+  padding: 9px 28px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#retry {
+  background-color: #f44336;
+}
+
+.score{
+  padding: 57px 27px 39px 25px;
+  text-align: center;
+}
+
+.score-text{
+  font-size: 28px;
+  /* padding-bottom: 10px; */
+}
+
+.retry-button{
+  margin-top: 16px;
+  padding: 10px 64px 10px 54px
+}
+
+.score-text-1{
+  padding: 22px;
+}
+
+.card-width{
+  width: 24%;
+}
+
+.card-body-text-center{
+  text-align: center;
+}
+
+.card-title-color{
+  color: #10267e;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.certificate-btn{
+  margin: 10px 0 10px 0;
+}
+
+.congrats-div{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-img-top{
+  width: 52%;
+  margin-bottom: 10px;
+}
+
+/* 
+ Take a class Style
+*/
+body{
+  background-color: #10267e;
+}
+
+.main-container{
+  padding: 24px 0px 64px 0px;
+}
+.takeclass-bg-color{
+  background-color: #10267e;
+}
+
+.take-a-class-container{
+  background-color: #f9f9fb;
+  padding: 22px;
+}
+
+.main-video{
+  width: 100%;
+}
+
+.select-subject{
+  padding: 6px 0 5px 10px;
+}
+
+.navbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.navbar {
+  background-color: #f9f9fb;
+  font-size: 13px;
+}
+
+.select-subjects-text{
+  width: 200px;
+  padding-top: 13px;
+  padding-left: 12px;
+}
+
+.subject-container{
+  border-bottom: 2px solid #f3f3f3;
+  width: 95%;
+}
+
+.navbar-nav .nav-link:hover {
+  border:1px solid #FFA354;
+  color: #FFA354;
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-link:focus {
+  background-color: #FFA354;
+  color: white;
+  border-radius: 5px;
+}
+
+.continue-watching-videos{
+  padding:10 2px 10px 2px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+progress{
+  width: 91%;
+  height: 8px;
+  margin-left: 7px;
+  accent-color: #DD2417;
+}
+
+.videos{
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
+
+.continue-watching-text{
+  padding: 34px 0 10px 8px;
+  color: #232121;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.top10skillstext{
+  padding-top: 42px;
+}
+
+.top10videos{
+  /* display: flex;
+  flex-direction: row; */
+  /* display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  height: 150px; set a fixed height for the container */
+  padding: 0px 15px ;
+  overflow: hidden;
+  background-color: #1F389A;
+}
+
+/* .top10videos img{
+  width: auto;
+  height: 100%; 
+  object-fit: contain; 
+  max-width: 100%;
+} */
+
+._ufjrdd polygon {
+  stroke: #ffffff;
+  stroke-width: 5px;
+}
+
+.top10videoscontent{
+  padding: 0 8px 0 0;
+}
+
+
+footer{
+  font-size: 15px;
+  background-color: #232121;
+  color: white;
+}
+
+.footer-text-color{
+  color:#9E9D9D;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer-headings{
+  font-size:15px;
+  font-weight: bold;
+}
+
+.contact-us-text{
+  color:#9E9D9D;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+#copyright-text{
+  padding-right: 10%;
+  color: #D5D6D8;
+  font-size: 15px;
+}
+
+#terms-text{
+  padding-top: 9px;
+  padding-left: 15%;
+  color: #c1c2c4;
+  font-size: 15px;
+}
+
+.copyright-footer-div{
+  display: flex;
+  justify-content: space-between;
+  background-color: #10267e;
+}
+
+.footer-row{
+  padding-left: 5%;
+}
+
+
+/* Take a class Page 2 Style */
+
+.display-topics{
+  display: flex;
+  justify-content: space-evenly;
+}
+/* .assessmentbtns{
+  color: #FFA354;
+} */
+.takeclass-btn{
+  color: #FFFFFF;
+  background-color: #1F389A;
+  font-size: 16px;
+  margin: 0 3px 0 3px;
+}
+.takeclass-btn:hover, .takeclass-btn:active{
+  color: #FFFFFF;
+  background-color: #192d7e;
+  font-size: 16px;
+}
+
+.topic-lists{
+  list-style: none;
+  padding: 15px 10px 16px 21px;
+}
+
+.topics{
+  border: 1px solid #70707033;
+  background-color: #FFFFFF;
+  box-shadow: 1px 2px 5px rgb(122, 121, 121);
+}
+.form-check-input{
+  color: #707070;
+}
+
+.form-check-input-lg:checked{
+  background-color: #FFA354;
+  color: #FFFFFF;
+}
+
+.takeclass-text{
+  color: #484848;
+  font-weight: normal;
+}
+
+.takeclass-text a{
+  color: #484848;
+  text-decoration: none;  
+}
+
+.takeaclass-buttons{
+    padding: 10px 0 10px 8px;
+}
+
+.takeclass-text-div{
+  padding: 20px 0 10px 15px;
+  color: #232121;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.takeaclass-buttons-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.takeaclass-buttons {
+  display: flex;
+  white-space: nowrap;
+}
+
+.takeaclass-buttons-container::-webkit-scrollbar {
+  display: none;
+}
+
+.takeclass-text-div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.takeclass-text-div-child{
+  width: 55%;
+}
+
+.assessment-btn{
+  background-color: #FFA354;
+  color: #ffffff;
+}
+.assessment-btn:hover{
+  background-color: #ff9234;
+  color: #ffffff;
+}
