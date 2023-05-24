@@ -1,0 +1,528 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual Navbar Example</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+        </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="{% static '/css/newlandingPageStyle.css' %}" />
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg nav-color" style="background: #f9f9fb;">
+        <div class="container nav-container-div">
+            <a class="navbar-brand navbar-img" class="landing_navbar_img" href="/" style="padding-left:10%;">
+                <img src="{% static '/images/Logo@2x.png' %}" alt="" srcset="" width="360px"
+                        height="52px" />
+            </a>
+            <div class="right-container">
+                <div class="search-div">
+                    <form class="d-flex search-bar" role="search">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text custom-border"><img
+                                        src="{% static '/images/Icon material-search.png' %}" alt="" srcset=""
+                                        width="20px" height="24px" /></span>
+                            </div>
+                            <input class="search-inp" type="text" name="search" id="search" placeholder="Search" />
+                        </div>
+                    </form>
+                </div>
+                <i class="bi bi-bell fs-4 ms-3"></i>
+
+                <div class="dropdown">
+                    <div class="dropdown-toggle userdropdown" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false" style="padding-top: 5px;">
+                        <!-- <img class="user-pic" src="../static/landingpageimg/prof.png" alt="" srcset="" /> -->
+                        <span style="font-size: 14px;">Sairam</span>
+                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Dynamic Timetable</a></li>
+                        <li><a class="dropdown-item" href="#">Blog</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light first-nav" style="height: 55px;">
+        <div class="container-fluid" style="font-size: 12px;">
+            <!-- Toggle Button for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- First Navbar -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <div class="navbar-nav">
+                    <a class="nav-link active landing-home-hover" aria-current="page" href="/dashboard">Dashboard</a>
+                    <a class="nav-link active landing-home-hover" aria-current="page" href="#">Dynamic Timetable</a>
+                    <a class="nav-link active landing-home-hover" aria-current="page" href="#">Video Based
+                        Dictionary</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle landing-home-hover" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#000000">
+                            Skills
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Reading</a></li>
+                            <li><a class="dropdown-item" href="#">listening</a></li>
+                            <li><a class="dropdown-item" href="#">Writing</a></li>
+                            <li><a class="dropdown-item" href="#">Speaking</a></li>
+                        </ul>
+                    </li>
+                    <a class="nav-link active landing-home-hover" aria-current="page" href="#">Learning Network</a>
+                    <a class="nav-link active landing-home-hover" aria-current="page" href="#">General Search</a>
+                    <a class="nav-link active landing-home-hover" aria-current="page" href="#">Little Masters</a>
+                    <a class="nav-link active landing-home-hover" aria-current="page" href="#">Take your Lesson</a>
+                    <a class="nav-link active landing-home-hover" aria-current="page" href="#">Other Activities</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div style="text-align:center; margin-top: 20px; padding-top: 2%;
+  padding-bottom: 7%;">
+        <h2 style="font-weight:bold; color: #fff;">WELCOME TO BRANE EDUCATION</h2>
+        <p style="color: #fff;">We are building the leaders our leaders build the world</p>
+
+
+    </div>
+
+
+
+    <div class="container-fluid takeclass-bg-color">
+        <div class="row main-container">
+            <div class="col-9 mx-auto ml-1.5 mr-1.5" style="background: #FFFFFF">
+                <div class="take-a-class-container">
+
+                    <div class="row">
+                        <div class="col-8" style="padding-bottom: 75px; padding-top: 10px;">
+                            <p style="color: #1F389A;font-size: 24px;font-weight: bolder; padding-left: 10px;">BRANE
+                                EDUCATION PLATFORM</p>
+                            <p style="text-align: left; color: #484848; font-size: 16px; padding-left: 10px;">
+                                Our purpose is to bring quality education and personalized teaching to every student,
+                                from every corner, and every walk of life, using the best of technologies and the best
+                                of minds, through an intuitive, inclusive and scalable platform.</p>
+                            <p style="text-align: left;"></p>
+                        </div>
+                        <div class="col-4 position-relative">
+                            <video
+                                class="image-placeholder rounded-circle position-absolute top-0 start-50 translate-middle-x border border-white border-4"
+                                src="{% static '/videos/ramcharn.mp4' %}"
+                                style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); margin-top: -77px;"
+                                src="img\ram charan.jpg" alt="placeholder image" width="250" height="250" controls>
+                                <button class="play-button"></button>
+
+                            </video>
+                            <!-- <img
+                class="image-placeholder rounded-circle position-absolute top-0 start-50 translate-middle-x border border-white border-4"
+                style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); margin-top: -77px;" src="img\ram charan.jpg"
+                alt="placeholder image" width="250" height="250"> -->
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-8 card-container">
+                            <div class="card border-dashed card-info text-center">
+                                <div class="card-body" style="padding-top:20px; padding-bottom: 40px;">
+                                    <h5 class="card-title" style="color: #1F389A; font-weight:bolder">Today's Inspiring
+                                        Quote</h5>
+                                    <div class="quote-symbol">&ldquo;</div>
+                                    <p class="card-text" style="
+                                    padding-left: 10px;
+                                    padding-right: 10px;">
+                                        Determination is the power that sees us through all our frustration and
+                                        obstacles. It helps in
+                                        building our willpower which is the very basis of success.
+                                    </p>
+                                    <div class="additional-text">- <span style="font-weight: bold;">APJ Abdul
+                                            Kalam</span></div>
+                                    <div class="quote-symbol-end">&rdquo;</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"
+                        style="padding-top: 20px;">
+                        <p
+                            style="font-size:30px;color:#1f389a;font-weight: bold; padding:10px 0 10px 0;text-align: center;">
+                            Motivational Videos</p>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <video class="d-block w-50 h-50 mx-auto" controls>
+                                    <source src="{% static '/videos/motivation.mp4' %}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="carousel-item">
+                                <video class="d-block w-50 h-50 mx-auto" controls>
+                                    <source src="{% static '/videos/steve jobs.mp4' %}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="carousel-item">
+                                <video class="d-block w-50 h-50 mx-auto" controls>
+                                    <source src="{% static '/videos/Cristiano Ronaldo Motivational video.mp4' %}"
+                                        type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev position-absolute top-0 start-0" type="button"
+                            data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next position-absolute top-0 end-0" type="button"
+                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                        <ol class="carousel-indicators custom-indicators">
+                            <li data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carouselExampleControls" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carouselExampleControls" data-bs-slide-to="2"></li>
+                        </ol>
+                    </div>
+
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <p style="font-size:30px;color:#1f389a;font-weight: bold; padding:70px 0 10px 0;">Our
+                                    Features</p>
+                                <!-- Add top padding to the heading -->
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 my-3">
+                                <div class="car service service-1" style="background-color: #8540FF;"
+                                    onclick="dashboard()">
+                                    <div class="car-body">
+                                        <div class="car-logo">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="60px" height="70px"
+                                                viewBox="0 0 61.955 61.955">
+                                                <path id="Icon_material-dashboard" data-name="Icon material-dashboard"
+                                                    d="M4.5,38.919H32.036V4.5H4.5Zm0,27.536H32.036V45.8H4.5Zm34.419,0H66.455V32.036H38.919Zm0-61.955V25.152H66.455V4.5Z"
+                                                    transform="translate(-4.5 -4.5)" fill="#fff" />
+                                            </svg>
+
+                                            <!-- Include the education dashboard symbol as the logo for the first car -->
+                                        </div>
+                                        <p class="car-title">Dashboard</p>
+                                        <!-- <p class="car-text">
+                      Dashboard shows student analytics by which they can evaluate their performance
+                    </p> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 my-3">
+                                <div class="car service service-2">
+                                    <div class="car-body">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="80"
+                                            viewBox="0 0 69 76.667">
+                                            <path id="icon"
+                                                d="M626.5,2567.5h-7.667v7.667H626.5Zm15.333,0h-7.667v7.667h7.667Zm15.333,0H649.5v7.667h7.667Zm7.667-26.833H661V2533h-7.667v7.667H622.667V2533H615v7.667h-3.833a7.632,7.632,0,0,0-7.628,7.667L603.5,2602a7.665,7.665,0,0,0,7.667,7.667h53.667A7.689,7.689,0,0,0,672.5,2602v-53.667A7.689,7.689,0,0,0,664.833,2540.667Zm0,61.333H611.167v-42.167h53.667Z"
+                                                transform="translate(-603.5 -2533)" fill="#fff" />
+                                        </svg>
+
+                                        <p class="car-title">Dynamic Timetable</p>
+                                        <!-- <p class="car-text">Here you can design your personalized and customized timetable </p> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 my-3">
+                                <div class="car service service-3">
+                                    <div class="car-body">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="80"
+                                            viewBox="0 0 64.999 65">
+                                            <path id="icon"
+                                                d="M1403.9,2999a1.9,1.9,0,1,1,0-3.809h2.031v-21.2a1.9,1.9,0,0,1,1.9-1.9h7.618a1.9,1.9,0,0,1,1.9,1.9v21.2h3.809v-13.584a1.9,1.9,0,0,1,1.9-1.9h7.617a1.9,1.9,0,0,1,1.9,1.9v13.584h3.808v-28.817a1.9,1.9,0,0,1,1.9-1.9h7.618a1.9,1.9,0,0,1,1.9,1.9v28.817h3.809v-40.243a1.9,1.9,0,0,1,1.9-1.9h7.618a1.9,1.9,0,0,1,1.9,1.9v40.243h2.031a1.9,1.9,0,0,1,0,3.809Zm17.266-32.626a5.677,5.677,0,0,1,.069-.693l-5.637-2.818a5.7,5.7,0,1,1,1.759-4.107,5.493,5.493,0,0,1-.07.692l5.637,2.818a5.612,5.612,0,0,1,6.4-1.033l7.647-7.646a5.65,5.65,0,0,1-.573-2.448,5.706,5.706,0,0,1,8.876-4.752l6.644-4.982a5.63,5.63,0,0,1-.285-1.692,5.724,5.724,0,1,1,2.551,4.752l-6.644,4.981a5.642,5.642,0,0,1,.285,1.692,5.719,5.719,0,0,1-5.713,5.713,5.636,5.636,0,0,1-2.447-.573l-7.647,7.647a5.651,5.651,0,0,1,.573,2.448,5.713,5.713,0,0,1-11.425,0Z"
+                                                transform="translate(-1402 -2933.999)" fill="#fff" />
+                                        </svg>
+                                        <p class="car-title">Learning Network</p>
+                                        <!-- <p class="car-text">Description of Service 3</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 my-3">
+                                <div class="car service service-4">
+                                    <div class="car-body">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="80"
+                                            viewBox="0 0 68.267 60.682">
+                                            <path id="Icon_awesome-file-signature"
+                                                data-name="Icon awesome-file-signature"
+                                                d="M25.857,50.269a1.313,1.313,0,0,0-1.205-.773,1.293,1.293,0,0,0-1.188.734l-.909,1.818a1.9,1.9,0,0,1-3.494-.248l-1.995-5.982L15.809,49.6a5.117,5.117,0,0,1-4.859,3.5H9.482a1.9,1.9,0,0,1,0-3.793H10.95a1.328,1.328,0,0,0,1.261-.908l2.156-6.476a2.846,2.846,0,0,1,5.4,0l1.645,4.935a5.319,5.319,0,0,1,7.822,1.678,1.345,1.345,0,0,0,1.109.742V39.543L45.512,24.48V18.963H29.393a2.853,2.853,0,0,1-2.844-2.844V0H2.844A2.838,2.838,0,0,0,0,2.844V57.837a2.838,2.838,0,0,0,2.844,2.844H42.667a2.838,2.838,0,0,0,2.844-2.844V53.1l-15.17-.013A5.089,5.089,0,0,1,25.857,50.269ZM45.511,14.447a2.835,2.835,0,0,0-.83-2L33.079.83A2.842,2.842,0,0,0,31.064,0h-.723V15.17h15.17ZM34.133,41.121V49.3H42.31L61.472,30.011l-8.045-8.045L34.133,41.121Zm33.249-21.29-3.777-3.777a3.019,3.019,0,0,0-4.268,0l-3.23,3.23,8.045,8.045,3.23-3.23A3.017,3.017,0,0,0,67.383,19.832Z"
+                                                fill="#f4f7f7" />
+                                        </svg>
+
+                                        <p class="car-title">Little Writers</p>
+                                        <!-- <p class="car-text">Description of Service 4</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 my-3">
+                                <div class="car service service-5">
+                                    <div class="car-body">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="80"
+                                            viewBox="0 0 64.99 64.99">
+                                            <path id="icon"
+                                                d="M1039.946,2998.994h-33.616v-1.12a3.365,3.365,0,0,1,3.362-3.362h26.892a3.366,3.366,0,0,1,3.362,3.362v1.119Zm-8.277-6.724h-17.061l1.494-4.482h14.073l1.494,4.481Zm18.362-6.722H996.246a2.244,2.244,0,0,1-2.241-2.242v-40.338a2.244,2.244,0,0,1,2.241-2.241H1020.9v4.482h-20.169a2.244,2.244,0,0,0-2.241,2.241v29.133a2.244,2.244,0,0,0,2.241,2.241h44.82a2.244,2.244,0,0,0,2.242-2.241v-8.963h4.482v15.686A2.244,2.244,0,0,1,1050.031,2985.549Zm-11.2-4.479v2.24h2.24v-2.24Zm-4.489,0v2.24h2.239v-2.24Zm-4.48,0v2.24h2.24v-2.24Zm15.688-4.486h-44.82v-29.133H1020.9v16.807a3.366,3.366,0,0,0,3.362,3.362h21.289v8.962Zm-4.478-4.484v2.24h2.24v-2.24Zm-38.1,0v2.24h35.86v-2.24Zm2.24-11.2v6.724h13.446v-11.206h-4.482v-6.722h-11.205v11.2Zm52.664,4.482h-33.616a1.122,1.122,0,0,1-1.121-1.121v-5.6h35.857v5.6A1.122,1.122,0,0,1,1057.874,2965.379Zm-30.254-4.479v2.24h26.89v-2.24Zm-11.2,4.479h-8.964V2960.9h6.723v-2.241h2.241v6.722Zm-4.485-6.729h-6.72v-6.72h6.72v6.719Zm47.065-2.236h-35.857v-21.29a1.122,1.122,0,0,1,1.121-1.12h33.616a1.122,1.122,0,0,1,1.12,1.12v21.289Zm-24.652-19.74h0v17.072l17.073-8.537-17.073-8.535Z"
+                                                transform="translate(-994.005 -2934.005)" fill="#fff" />
+                                        </svg>
+
+                                        <p class="car-title">Video Based Dictionary</p>
+                                        <!-- <p class="car-text">Description of Service 5</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 my-3">
+
+                                <div class="car service service-6">
+                                    <div class="car-body">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="80"
+                                            viewBox="0 0 78.385 70.967">
+                                            <g id="Group_179720" data-name="Group 179720"
+                                                transform="translate(-997.267 -2532.031)">
+                                                <path id="Icon_awesome-globe-americas"
+                                                    data-name="Icon awesome-globe-americas"
+                                                    d="M34.733.562A34.733,34.733,0,1,0,69.467,35.3,34.733,34.733,0,0,0,34.733.562ZM46.258,50.646c-.546.543-1.119,1.113-1.584,1.58a3.347,3.347,0,0,0-.864,1.5c-.211.793-.382,1.594-.668,2.363L40.707,62.65a27.989,27.989,0,0,1-5.973.657V59.472c.237-1.767-1.07-5.078-3.169-7.178a4.482,4.482,0,0,1-1.312-3.169V44.642a4.467,4.467,0,0,0-2.305-3.917c-2.013-1.113-4.875-2.669-6.836-3.657a20.19,20.19,0,0,1-4.433-3.046l-.112-.1a16.077,16.077,0,0,1-2.529-2.9c-1.314-1.929-3.454-5.1-4.844-7.162A28.163,28.163,0,0,1,23.645,9.583l3.363,1.682a2.241,2.241,0,0,0,3.244-2V7.679a27.99,27.99,0,0,1,3.416-.339L37.631,11.3a2.241,2.241,0,0,1,0,3.169l-.657.655-1.448,1.448a1.121,1.121,0,0,0,0,1.584l.657.657a1.121,1.121,0,0,1,0,1.584l-1.12,1.12a1.122,1.122,0,0,1-.793.328H33.011a1.12,1.12,0,0,0-.782.318L30.84,23.519a1.122,1.122,0,0,0-.221,1.3L32.8,29.191a1.121,1.121,0,0,1-1,1.622h-.79a1.119,1.119,0,0,1-.734-.275l-1.3-1.129a2.243,2.243,0,0,0-2.178-.434L22.434,30.43a1.674,1.674,0,0,0-.218,3.085l1.552.776a9.485,9.485,0,0,0,4.245,1c1.473,0,3.164,3.822,4.482,4.482h9.349a4.484,4.484,0,0,1,3.169,1.312l1.917,1.917a4.272,4.272,0,0,1,1.251,3.021,6.518,6.518,0,0,1-1.922,4.619ZM58.4,37.852a3.362,3.362,0,0,1-1.982-1.4L53.9,32.678a3.357,3.357,0,0,1,0-3.728l2.744-4.115a3.358,3.358,0,0,1,1.294-1.141l1.818-.909a27.134,27.134,0,0,1,2.731,16.088Z"
+                                                    transform="translate(997.267 2531.469)" fill="#fff" />
+                                                <path id="Icon_awesome-search" data-name="Icon awesome-search"
+                                                    d="M41.707,36.562l-8.234-8.234a1.981,1.981,0,0,0-1.4-.578H30.723a17.171,17.171,0,1,0-2.973,2.973v1.346a1.981,1.981,0,0,0,.578,1.4l8.234,8.234a1.974,1.974,0,0,0,2.8,0L41.7,39.37A1.991,1.991,0,0,0,41.707,36.562ZM17.178,27.75A10.571,10.571,0,1,1,27.75,17.178,10.565,10.565,0,0,1,17.178,27.75Z"
+                                                    transform="translate(1031.66 2559.209)" fill="#fff" stroke="#49af46"
+                                                    stroke-width="3" />
+                                            </g>
+                                        </svg>
+
+                                        <p class="car-title">General Search</p>
+                                        <!-- <p class="car-text">Description of Service 6</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Grid column-->
+
+    <footer class="text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!--Grid row-->
+          <div class="row footer-row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="footer-headings">Home</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="footer-text-color">Dynamic Time Table</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">Video Based Digital Library</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">Spelling Skills</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">Memory skills</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">Listening skills</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">General Search</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">Little Masters</a>
+                </li>
+                <li>
+                  <a href="/dashboard" class="footer-text-color">Dashboard</a>
+                </li>
+                <li>
+                  <a href="/takelesson" class="footer-text-color">Ready to take class</a>
+                </li>
+                <li>
+                  <a href="/activites" class="footer-text-color">Other Activities</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="footer-headings">Syllabus</h5>
+    
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!" class="footer-text-color">NCERT Subject Books</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">NCERT Solutions</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">PDF Materials</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">Previous Year Question Papers</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">Solved Model Papers</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">Important questions</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">Text Book Solutions</a>
+                </li>
+                
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="footer-headings">Notifications</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="footer-text-color">List of Articles</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">Olympiad Exams</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">Education related News</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">Support</a>
+                </li>
+                <li>
+                  <a href="#!" class="footer-text-color">Government Scholarships</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="footer-headings">Contact Us</h5>
+    
+              <ul class="list-unstyled">
+                <li class="contact-us-text" style="color:#9e9d9d">
+                  Corporate Office: <br>
+                  Building 3A and 3B, <br>
+                  Raheja Mindspace, <br> HUDA Techno
+                  <br>Enclave
+                  HITEC City, <br> Telangana 500081 <br>
+                </li>
+                <br>
+                <li class="contact-us-text" style="padding-top: 10px; color:#9e9d9d">
+                  <p>
+                    +91 9123 456 7890 <br>
+                    +91 40 123 56 7890 <br>
+                    info@braneenterprises.com
+                  </p>
+                </li>
+    
+                <li>
+                  <h5 class="footer-headings">Follow Us On:</h5>
+                  
+    
+                  <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px" height="30px">
+                    <path
+                      d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z" />
+                  </svg>
+    
+    
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256"
+                    width="30px" height="30px" fill-rule="nonzero">
+                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                      stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                      font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                      style="mix-blend-mode: normal">
+                      <g transform="scale(5.12,5.12)">
+                        <path
+                          d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM17,20v19h-6v-19zM11,14.47c0,-1.4 1.2,-2.47 3,-2.47c1.8,0 2.93,1.07 3,2.47c0,1.4 -1.12,2.53 -3,2.53c-1.8,0 -3,-1.13 -3,-2.53zM39,39h-6c0,0 0,-9.26 0,-10c0,-2 -1,-4 -3.5,-4.04h-0.08c-2.42,0 -3.42,2.06 -3.42,4.04c0,0.91 0,10 0,10h-6v-19h6v2.56c0,0 1.93,-2.56 5.81,-2.56c3.97,0 7.19,2.73 7.19,8.26z">
+                        </path>
+                      </g>
+                    </g>
+                  </svg>
+    
+                  <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px" height="30px">
+                    <path
+                      d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z" />
+                  </svg>
+    
+                  <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
+                    width="30px" height="30px">
+                    <path
+                      d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z" />
+                    </svg>
+                </li>
+    
+              </ul>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-3 copyright-footer-div">
+    
+          <div id="terms-text">
+            Privacy Policy | Terms & Conditions
+          </div>
+    
+          <div id="copyright-text">
+            Copyright © 2023: Brane Education. All rights reserved.
+          </div>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+
+
+    <script>
+        function dashboard() {
+            window.location.href = '/dashboard'
+        }
+
+    </script>
+</body>
+
+</html>
+
