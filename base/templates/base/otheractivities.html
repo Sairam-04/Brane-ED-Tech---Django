@@ -1,0 +1,162 @@
+{% extends 'base/Main_template.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid takeclass-bg-color">
+    <div class="row main-container">
+      <div class="col-9 mx-auto ml-1.5 mr-1.5">
+        <div class="take-a-class-container">
+
+          <div class="class-video">
+            <video class="main-video" src="{% static '/videos/games.mp4' %}" autoplay muted></video>
+          </div>
+          <div class="d-flex subject-container">
+            <span class="select-subjects-text"
+              style="color: #1f389e; font-size: 18px; font-weight: bolder;">Select&nbsp;Your Category</span>
+            <div class="subject-navbar">
+              <nav class="navbar navbar-expand-lg navbar-light bg-grey">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="englishDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Sports
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="englishDropdown">
+                          <li><a class="dropdown-item" href="#">Cricket</a></li>
+                          <li><a class="dropdown-item" href="#">FootBall</a></li>
+                          <li><a class="dropdown-item" href="#">BasketBall</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="mathDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Health Tips
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mathDropdown">
+                          <li><a class="dropdown-item" href="#">Dental</a></li>
+                          <li><a class="dropdown-item" href="#">Skin</a></li>
+                          <li><a class="dropdown-item" href="#">Hair</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="scienceDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Hobbies
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="scienceDropdown">
+                          <li><a class="dropdown-item" href="#">Singing</a></li>
+                          <li><a class="dropdown-item" href="#">Painting</a></li>
+                          <li><a class="dropdown-item" href="#">Art and Craft</a></li>
+                          <li><a class="dropdown-item" href="#">Dance</a></li>
+                          <li><a class="dropdown-item" href="#">Coins Collection</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="socialDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Mind Games
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="socialDropdown">
+                          <li><a class="dropdown-item" href="#">Cross Word</a></li>
+                          <li><a class="dropdown-item" href="#">Chess</a></li>
+                          <li><a class="dropdown-item" href="#">Puzzles</a></li>
+                          <li><a class="dropdown-item" href="#">Bridge</a></li>
+                          <li><a class="dropdown-item" href="#">Alpha Go</a></li>
+                        </ul>
+                      </li>
+
+                    </ul>
+                  </div>
+              </nav>
+            </div>
+          </div>
+          <div class="row px-3 py-2 display-topics">
+            <div class="col-2 topics">
+              <div style="border-bottom: 2px solid #70707033;font-weight: bold; padding:10px 0 10px 5px;">Topics</div>
+              <ul class="topic-lists">
+                <li class="form-check">
+                  <input class="form-check-input form-check-input-lg" type="checkbox" value="" id="flexCheckDefault"
+                    checked>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Level-1
+                  </label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Level-2
+                  </label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Level-3
+                  </label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Level-4
+                  </label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Level-5
+                  </label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Level-6
+                  </label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Level-7
+                  </label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Level-8
+                  </label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Level-9
+                  </label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Level-10
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="col-9 ml-4">
+              <!-- <img src="../static/img1/poster-video-img.png" alt="" srcset="" width="100%" height="400px"> -->
+              <video src="{% static '/videos/cricket.mp4' %}" controls width="100%" height="400px"></video>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

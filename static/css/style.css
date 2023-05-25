@@ -1,0 +1,86 @@
+/* @media(min-width:) */
+.nav-color{
+    background-color: #FFFFFF;
+}
+.navbar-img{
+    margin-left: 13%;
+}
+
+.search-bar{
+    margin-right: 7%;
+}
+
+.container-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox-remeberme{
+    display: flex;
+    justify-content: space-between;
+}
+/* 
+
+.container-login-img{
+    background-color: blue;
+} */
+
+.bg-image {
+    background-image: url("../images/Login-bg-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #1F389A;
+}
+
+.login-card{
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 60px;
+}
+
+/* .checkbox-singup{
+    display: flex;
+    justify-self: start;
+}
+
+.checkbox-singup > div{
+    margin: 5px;
+} */
+
+.signup-btn-color{
+    background-color: #FFA354;
+}
+
+.bg-second{
+    background-color: #F3F3F3;
+}
+
+
+.bg-height{
+    height: 100vh;
+}
+
+.text-custom-color{
+    color: #FFA354;
+}
+
+.search-input{
+    display: inline-block;
+    border : none;
+    outline: none;
+    border-bottom: 1px solid #707070;
+    font-size: large;
+    width: 220px;
+    color: #837C7C;
+    background-color: #FFFFFF;
+}
+
+.custom-border {
+    border: none;
+    background-color: #FFFFFF;
+  }
+
+/* Landing Page Styling */

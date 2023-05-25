@@ -1,0 +1,719 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mentor Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static '/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static '/css/style1.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Mentor
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <!-- <h1 class="logo me-auto"><a href="index.html">Mentor</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="/" class="logo me-auto"><img src="{% static '/images/Logo@2x.png' %}" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="#popular-courses">Parents Voice</a></li>
+          <li><a href="#trainers">Leaders Voice</a></li>
+          <li><a href="courses.html">Sucess Stories</a></li>
+          <li><a href="trainers.html">Patents</a></li>
+          <li><a href="events.html">AI</a></li>
+          <li><a href="pricing.html">Advisory Board</a></li>
+          <!-- <li><a href="contact.html">Contact</a></li> -->
+          <!-- <a href="courses.html" class="get-started-btn">Login</a> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a href="{% url 'SignIn' %}" class="get-started-btn">Login</a>
+
+      <a href="{% url 'SignUp' %}" class="get-started-btn">Sign up</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <div class="hero-div">
+    <section id="hero" class="d-flex justify-content-center align-items-center">
+      <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+        <h1>WORLD IS CHANGING,<br>WITH LEARNING</h1>
+        <h1>BRANE IS CHANGING<br> THE LEARNING</h1>
+        <a href="courses.html" class="btn-get-started">About Platform</a>
+      </div>
+    </section>
+  </div>
+  <!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="{% static '/images/Group 5.png' %}" class="img-fluid" alt="">
+            <!-- <video height="100" width="500" controls autoplay muted><source src="assets/img/AI video.webm"></video> -->
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Fully AI Powered Personalized Education </h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla
+                pariatur.</li>
+            </ul>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="{% static '/images/Group 102347.png' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Worlds First Voice Based Interactive Learning Platform </h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla
+                pariatur.</li>
+            </ul>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="{% static '/images/Group 6.png' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Concept Based Learning Not only <br>Academic We Include Life Concepts Too</h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla
+                pariatur.</li>
+            </ul>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts section-bg">
+      <div class="container">
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p>Students Enrolled</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p>Learning Concepts Delivered</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p>Our Patents</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p>Time Spent Hours</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Why Choose Brane Platform?</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad
+                corporis.
+              </p>
+              <div class="text-center">
+                <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Listening Skills</h4>
+                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Speaking Sills</h4>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>Memory Skills</h4>
+                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+    <section id="popular-courses" class="courses">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <!-- <h2>Courses</h2> -->
+          <p>Parents Voice</p>
+        </div>
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="course-item">
+              <img src="{% static 'images/pa1.jpg' %}" class="img-fluid" alt="...">
+              <div class="course-content">
+                <!-- <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4>Web Development</h4>
+                  <p class="price">$169</p>
+                </div> -->
+
+                <h3><a href="course-details.html">My Perspective</a></h3>
+                <p>We know that every child is unique, which is why our platform offers a flexible and adaptable
+                  learning environment that can be tailored to meet your child's individual needs. As a parent, you'll
+                  be able to monitor your child's progress, stay connected with teachers, and support your child every
+                  step of the way.</p>
+
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+
+                    <img src="{% static '/images/trainer-1.jpg' %}" class="img-fluid" alt="">
+                    <span>Ramesh</span>
+                  </div>
+
+                  <div class="trainer-rank d-flex align-items-center">
+                    <i class="bx bx-user"></i>&nbsp;50
+                    &nbsp;&nbsp;
+                    <i class="bx bx-heart"></i>&nbsp;65
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="course-item">
+              <img src="{% static '/images/pa2.jpg' %}" class="img-fluid" alt="...">
+              <div class="course-content">
+                <!-- <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4>Marketing</h4>
+                  <p class="price">$250</p>
+                </div> -->
+
+                <h3><a href="course-details.html">My View</a></h3>
+                <p>Platform offers a flexible and convenient way for your child to learn from the comfort of your own
+                  home.personalized approach ensures that your child receives the support they need to succeed, while
+                  our easy-to-use platform makes it simple for you to track.
+                </p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="{% static '/images/trainer-2.jpg' %}" class="img-fluid" alt="">
+                    <span>Suresh</span>
+                  </div>
+                  <div class="trainer-rank d-flex align-items-center">
+                    <i class="bx bx-user"></i>&nbsp;35
+                    &nbsp;&nbsp;
+                    <i class="bx bx-heart"></i>&nbsp;42
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="course-item">
+              <img src="{% static '/images/pa3.jpg' %}" class="img-fluid" alt="...">
+              <div class="course-content">
+                <!-- <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4>Content</h4>
+                  <p class="price">$180</p>
+                </div> -->
+
+                <h3><a href="course-details.html">My Comments</a></h3>
+                <p>With expert teachers and personalized approach, we're able to meet the unique needs of every student,
+                  ensuring that your child receives the support and guidance they need to reach their full potential.
+                  platform offers a dynamic and engaging learning environment that helps your child develop the skills
+                  they need to succeed in school and beyond. </p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="{% static '/images/trainer-3.jpg' %}" class="img-fluid" alt="">
+                    <span>Balaji</span>
+                  </div>
+                  <div class="trainer-rank d-flex align-items-center">
+                    <i class="bx bx-user"></i>&nbsp;20
+                    &nbsp;&nbsp;
+                    <i class="bx bx-heart"></i>&nbsp;85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Popular Courses Section ======= -->
+    <section id="popular-courses" class="courses">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <!-- <h2>Courses</h2> -->
+          <p>Students Voice</p>
+        </div>
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="course-item">
+              <img src="{% static '/images/s1.jpg' %}" class="img-fluid" alt="...">
+              <div class="course-content">
+                <!-- <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4>Web Development</h4>
+                  <p class="price">$169</p>
+                </div> -->
+
+                <h3><a href="course-details.html">My Opinion</a></h3>
+                <p>Through my experience on this platform, I've gained valuable knowledge and skills that have helped me
+                  grow both academically and personally. The interactive lessons and engaging activities have made
+                  learning fun and accessible, and the support of my teachers and peers has been invaluable.</p>
+
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+
+                    <img src="{% static '/images/trainer-1.jpg' %}" class="img-fluid" alt="">
+                    <span>Rakesh Rohan</span>
+                  </div>
+
+                  <div class="trainer-rank d-flex align-items-center">
+                    <i class="bx bx-user"></i>&nbsp;50
+                    &nbsp;&nbsp;
+                    <i class="bx bx-heart"></i>&nbsp;65
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="course-item">
+              <img src="{% static '/images/s2.jpg' %}" class="img-fluid" alt="...">
+              <div class="course-content">
+                <!-- <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4>Marketing</h4>
+                  <p class="price">$250</p>
+                </div> -->
+
+                <h3><a href="course-details.html">My Voice</a></h3>
+                <p>As a student, I appreciate the flexibility and convenience that comes with being able to learn from
+                  anywhere at any time. The engaging lessons and interactive materials have made learning both fun and
+                  effective. I've also enjoyed connecting with other students and teachers, which has helped me to stay
+                  motivated and inspired.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="{% static '/images/trainer-2.jpg' %}" class="img-fluid" alt="">
+                    <span>Sayyad Riyaz</span>
+                  </div>
+                  <div class="trainer-rank d-flex align-items-center">
+                    <i class="bx bx-user"></i>&nbsp;35
+                    &nbsp;&nbsp;
+                    <i class="bx bx-heart"></i>&nbsp;42
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="course-item">
+              <img src="{% static '/images/s3.jpg' %}" class="img-fluid" alt="...">
+              <div class="course-content">
+                <!-- <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4>Content</h4>
+                  <p class="price">$180</p>
+                </div> -->
+
+                <h3><a href="course-details.html">My Viewpoint</a></h3>
+                <p>The lessons and resources here have been invaluable in helping me achieve my academic goals. I love
+                  the way the platform is designed to make learning engaging and interactive, and the flexibility it
+                  offers has been a game-changer for me. I also appreciate the support of my teachers and peers, who
+                  have encouraged me to reach my full potential. </p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="{% static '/images/trainer-3.jpg' %}" class="img-fluid" alt="">
+                    <span>Sai Ram</span>
+                  </div>
+                  <div class="trainer-rank d-flex align-items-center">
+                    <i class="bx bx-user"></i>&nbsp;20
+                    &nbsp;&nbsp;
+                    <i class="bx bx-heart"></i>&nbsp;85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+        </div>
+
+      </div>
+    </section><!-- End Popular Courses Section -->
+
+    <!-- ======= Trainers Section ======= -->
+    <section id="trainers" class="trainers">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <!-- <h2>Courses</h2> -->
+          <p>Leaders Voice</p>
+        </div>
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="{% static '/images/trainer-1.jpg' %}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Walter White</h4>
+                <span>Web Development</span>
+                <p>
+                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut
+                  aut aut
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="{% static '/images/trainer-2.jpg' %}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Sarah Jhinson</h4>
+                <span>Marketing</span>
+                <p>
+                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum
+                  temporibus
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="{% static '/images/trainer-2.jpg' %}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>William Anderson</h4>
+                <span>Content</span>
+                <p>
+                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Trainers Section -->
+
+  </main><!-- End #main -->
+  <div>
+    <section id="counts" class="counts section-bg">
+      <!-- <marquee direction="left"> -->
+      <div class="container">
+
+        <img src="{% static '/images/telugu.png' %}" style="height:40px">
+        <img src="{% static '/images/tamil.png' %}" style="height:40px">
+        <img src="{% static '/images/kanada.png' %}" style="height:40px">
+        <img src="{% static '/images/hindi.png' %}" style="height:40px">
+        <img src="{% static '/images/bengali.png' %}" style="height:40px">
+        <img src="{% static '/images/malayalam.png' %}" style="height:40px">
+        <img src="{% static '/images/tsssc.jpg' %}" style="height:40px">
+        <img src="{% static '/images/cbselogo.png' %}" style="height:40px">
+        <img src="{% static '/images/biharlogo.png' %}" style="height:40px">
+        <img src="{% static '/images/jklogo.jpg' %}" style="height:40px">
+        <img src="{% static '/images/tsssc.jpg' %}" style="height:40px">
+        <img src="{% static '/images/cbselogo.png' %}" style="height:40px">
+        
+        <img src="{% static '/images/jklogo.jpg' %}" style="height:40px">
+        <img src="{% static '/images/biharlogo.png' %}" style="height:40px">
+        <img src="{% static '/images/jklogo.jpg' %}" style="height:40px">
+
+      </div>
+      <!-- </marquee> -->
+    </section>
+  </div>
+  <div>
+    <section id="counts" class="counts section-bg">
+      <!-- <marquee direction="right"> -->
+      <div class="container">
+
+        <h2 style="color: #152979;text-align: center;">Supports All Curriculum With Multi Language Support</h2>
+
+      </div>
+      <!-- </marquee> -->
+    </section>
+  </div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <!-- <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Mentor</h3>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div> -->
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4 style="color:#ffa354;">Boards</h4>
+            <ul>
+              <li> <a style="color:white;" href="#">CBSE</a></li>
+              <li> <a style="color:white;" href="#">ICSE</a></li>
+              <li> <a style="color:white;" href="#">Cambridge</a></li>
+              <li> <a style="color:white;" href="#">UP Board</a></li>
+              <li> <a style="color:white;" href="#">Maharashtra State Board </a></li>
+              <li> <a style="color:white;" href="#">AP Board</a></li>
+              <li> <a style="color:white;" href="#">Gujarat Board</a></li>
+              <li> <a style="color:white;" href="#">Karnataka Examination Board</a></li>
+              <li> <a style="color:white;" href="#">Kerala Board</a></li>
+              <li> <a style="color:white;" href="#">Tamil Nadu State Board</a></li>
+              <li> <a style="color:white;" href="#">TS Board of Education</a></li>
+              <li> <a style="color:white;" href="#">West Bengal Board</a></li>
+
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4 style="color:#ffa354;">NCERT Books & Solution</h4>
+            <ul>
+              <li> <a style="color:white;" href="#">Class 1</a></li>
+              <li> <a style="color:white;" href="#">Class 2</a></li>
+              <li> <a style="color:white;" href="#">Class 3</a></li>
+              <li> <a style="color:white;" href="#">Class 4</a></li>
+              <li> <a style="color:white;" href="#">Class 5</a></li>
+              <li> <a style="color:white;" href="#">Class 6</a></li>
+              <li> <a style="color:white;" href="#">Class 7</a></li>
+              <li> <a style="color:white;" href="#">Class 8</a></li>
+              <li> <a style="color:white;" href="#">Class 9</a></li>
+              <li> <a style="color:white;" href="#">Class 10</a></li>
+              <li> <a style="color:white;" href="#">Class 11</a></li>
+              <li> <a style="color:white;" href="#">Class 12</a></li>
+
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4 style="color:#ffa354;">Notifications</h4>
+            <ul>
+              <li> <a style="color:white;" href="#">List of Articles</a></li>
+              <li> <a style="color:white;" href="#">Olympiad Examination</a></li>
+              <li> <a style="color:white;" href="#">Education Related News</a></li>
+              <li> <a style="color:white;" href="#">Support</a></li>
+              <li> <a style="color:white;" href="#">Government Scholarships</a></li>
+              <li> <a style="color:white;" href="#">Mock Tests</a></li>
+            </ul>
+
+          </div>
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4 style="color:#ffa354;">Company</h4>
+            <ul>
+              <li> <a style="color:white;" href="#">About Us</a></li>
+              <li> <a style="color:white;" href="#">What Makes Us Different?</a></li>
+              <li> <a style="color:white;" href="#">Why Choose Us?</a></li>
+              <li> <a style="color:white;" href="#">Sponsorships</a></li>
+              <li> <a style="color:white;" href="#">Our Supporters</a></li>
+              <li> <a style="color:white;" href="#">Careers</a></li>
+              <li> <a style="color:white;" href="#">Blog</a></li>
+              <li> <a style="color:white;" href="#">Advisory Board</a></li>
+              <li> <a style="color:white;" href="#">FAQ's</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4 style="color:#ffa354;">Contact Us</h4>
+            <p>Corporate Office:<br>Building 3A & 3B,<br>Raheja Mindspace,HUDA Techno Enclave,<br>HITEC City,Telangana 500081</p>
+            <br>
+            <p>+91 9123 456 7890 <br>  +91 40 123 56 7890 <br>info@braneenterprises.com</p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright" style="color: #1f389a;">
+          <!-- &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved -->
+          Copyright ©2023 Brane Education. All rights reserved.
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+          <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static '/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static '/vendor/aos/aos.js' %}"></script>
+  <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static '/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static '/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static '/js/main.js' %}"></script>
+
+</body>
+
+</html>

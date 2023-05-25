@@ -1,0 +1,40 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg nav-color" style="background: #f9f9fb;">
+    <div class="container nav-container-div">
+      <a class="navbar-brand navbar-img" href="/">
+        <img src="{% static '/images/Logo@2x.png' %}" alt="" srcset="" width="360px" height="52px" />
+      </a>
+      <div class="right-container">
+        <div class="search-div">
+          <form class="d-flex search-bar" role="search">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text custom-border"><img src="{% static '/images/Icon material-search.png' %}" alt="" srcset=""
+                    width="20px" height="24px" /></span>
+              </div>
+              <input class="search-inp" type="text" name="search" id="search" placeholder="Search" />
+            </div>
+          </form>
+        </div>
+        <i class="bi bi-bell fs-4 ms-3"></i>
+
+        <div class="dropdown">
+          <div class="dropdown-toggle userdropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+            aria-expanded="false" style="padding-top: 5px;">
+            <!-- <img class="user-pic" src="../static/img1/prof.png" alt="" srcset="" /> -->
+            {% if request.user.is_authenticated %}
+              <span style="font-size: 14px;">{{request.user}}</span>
+            {% endif %}
+          </div>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Dynamic Timetable</a></li>
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="{% url 'Logout' %}">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,32 @@
+{% extends "base/Main_template.html" %}
+{% load static %}
+
+
+
+{% block content %}
+    <style>
+        .card-header {
+        font-weight: bold;
+        }
+        .form-check-label {
+        font-weight: normal;
+        }
+    </style>
+
+    <div class="container-fluid container-bg-color" >
+        <div class="row">
+            <div class="col-8 mx-auto pt-3 pb-5">
+            <div id="quiz">
+                <div></div>
+            </div>
+            <button id="submit">Submit</button>
+            
+            <button class="btn btn-primary btn-lg" id="retry">Retry</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static '/js/app1.js' %}"></script>
+
+{% endblock content %} 
+

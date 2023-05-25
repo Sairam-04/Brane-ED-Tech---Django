@@ -1,0 +1,244 @@
+
+{% extends 'base/Main_template.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container-fluid takeclass-bg-color">
+    <div class="row main-container">
+      <div class="col-9 mx-auto ml-1.5 mr-1.5">
+        <div class="take-a-class-container">
+
+          <div class="class-video">
+            <video class="main-video" src="{% static '/videos/samplevideo.mp4' %}" autoplay muted></video>
+          </div>
+          <div class="d-flex subject-container">
+            <span class="select-subjects-text"
+              style="color: #1f389e; font-size: 18px; font-weight: bolder;">Select&nbsp;Subjects</span>
+            <div class="subject-navbar">
+              <nav class="navbar navbar-expand-lg navbar-light bg-grey">
+                <div class="container-fluid" style="padding:0px;">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="l1Dropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Language 1
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="l1Dropdown">
+                          <li><a class="dropdown-item" href="#">Grammar</a></li>
+                          <li><a class="dropdown-item" href="#">Poetry</a></li>
+                          <li><a class="dropdown-item" href="#">Literature</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="l2Dropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Language 2
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="l2Dropdown">
+                          <li><a class="dropdown-item" href="#">Grammar</a></li>
+                          <li><a class="dropdown-item" href="#">Poetry</a></li>
+                          <li><a class="dropdown-item" href="#">Literature</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="l3Dropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Language 3
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="l3Dropdown">
+                          <li><a class="dropdown-item" href="#">Grammar</a></li>
+                          <li><a class="dropdown-item" href="#">Poetry</a></li>
+                          <li><a class="dropdown-item" href="#">Literature</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="mathsDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Maths
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mathsDropdown">
+                          <li><a class="dropdown-item" href="#">Calculus</a></li>
+                          <li><a class="dropdown-item" href="#">Vectors</a></li>
+                          <li><a class="dropdown-item" href="#">Geometry</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="scienceDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Science
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="scienceDropdown">
+                          <li><a class="dropdown-item" href="#">Physics</a></li>
+                          <li><a class="dropdown-item" href="#">Chemistry</a></li>
+                          <li><a class="dropdown-item" href="#">Biology</a></li>
+                          <li><a class="dropdown-item" href="#">Zoology</a></li>
+                          <li><a class="dropdown-item" href="#">Botany</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="socialDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Social
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="socialDropdown">
+                          <li><a class="dropdown-item" href="#">History</a></li>
+                          <li><a class="dropdown-item" href="#">Geography</a></li>
+                          <li><a class="dropdown-item" href="#">Civics</a></li>
+                          <a class="dropdown-item" href="{% url 'takeaclassPage2' %}">Poltical Science</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="computersDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Computers
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="computersDropdown">
+                          <li><a class="dropdown-item" href="#">HTML</a></li>
+                          <li><a class="dropdown-item" href="#">MS Office</a></li>
+                          <li><a class="dropdown-item" href="#">C language</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="gkDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          GK
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="gkDropdown">
+                          <li><a class="dropdown-item" href="#">Politics</a></li>
+                          <li><a class="dropdown-item" href="#">Civils</a></li>
+                          <li><a class="dropdown-item" href="#">Current Affairs</a></li>
+                        </ul>
+                      </li>
+
+                    </ul>
+                  </div>
+              </nav>
+            </div>
+          </div>
+          <div class="videohistory-container">
+
+            <div class="continue-watching">
+              <div class="continue-watching-text">
+                Continue Watching for {{request.user}}
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" role="img"
+                  aria-labelledby="ChevronRight3e39c339-1bed-4be8-ff4b-16c5b5cff856 ChevronRight3e39c339-1bed-4be8-ff4b-16c5b5cff856Desc"
+                  xmlns="http://www.w3.org/2000/svg" style="fill: #232121; height: 24px; width: 28px;">
+                  <polygon transform="translate(23.999500, 24.000000) scale(-1, 1) translate(-23.999500, -24.000000)"
+                    points="16 24 30.585 40 31.999 38.586 18.828 24 31.999 9.415 30.585 8" role="presentation">
+                  </polygon>
+                </svg>
+              </div>
+              <div class="continue-watching-videos">
+                <div id="video-1" class="videos">
+                  <!-- <video src="img/samplevideo.mp4" width="174px" height="110px" controls></video> -->
+                  <img src="{% static '/images/thumbnails/1.png' %}" alt="" srcset="" width="174px" height="110px">
+                  <progress value="20" max="100"> </progress>
+                </div>
+                <div id="video-2" class="videos">
+                  <img src="{% static '/images/thumbnails/2.png' %}" alt="" srcset="" width="174px" height="110px">
+                  <progress value="70" max="100"> </progress>
+                </div>
+                <div id="video-3" class="videos">
+                  <img src="{% static '/images/thumbnails/3.png' %}" alt="" srcset="" width="174px" height="110px">
+                  <progress value="37" max="100"> </progress>
+                </div>
+                <div id="video-4" class="videos">
+                  <img src="{% static '/images/thumbnails/4.png' %}" alt="" srcset="" width="174px" height="110px">
+                  <progress value="44" max="100"> </progress>
+                </div>
+                <div id="video-5" class="videos">
+                  <img src="{% static '/images/thumbnails/5.png' %}" alt="" srcset="" width="174px" height="110px">
+                  <progress value="49" max="100"> </progress>
+                </div>
+                <div id="video-6" class="videos">
+                  <img src="{% static '/images/thumbnails/6.png' %}" alt="" srcset="" width="174px" height="110px">
+                  <progress value="76" max="100"> </progress>
+                </div>
+                <div id="video-7" class="videos">
+                  <img src="{% static '/images/thumbnails/7.png' %}" alt="" srcset="" width="174px" height="110px">
+                  <progress value="87" max="100"> </progress>
+                </div>
+                <div id="video-8" class="videos">
+                  <img src="{% static '/images/thumbnails/8.png' %}" alt="" srcset="" width="174px" height="110px">
+                  <progress value="19" max="100"> </progress>
+                </div>
+                <div id="video-9" class="videos">
+                  <img src="{% static '/images/thumbnails/9.png' %}" alt="" srcset="" width="174px" height="110px">
+                  <progress value="59" max="100"> </progress>
+                </div>
+                <div id="video-10" class="videos">
+                  <img src="{% static '/images/thumbnails/10.png' %}" alt="" srcset="" width="174px" height="110px">
+                  <progress value="90" max="100"> </progress>
+                </div>
+                <div id="video-11" class="videos">
+                  <img src="{% static '/images/thumbnails/11.png' %}" alt="" srcset="" width="174px" height="110px">
+                  <progress value="60" max="100"> </progress>
+                </div>
+                <div id="video-12" class="videos">
+                  <img src="{% static '/images/thumbnails/12.png' %}" alt="" srcset="" width="174px" height="110px">
+                  <progress value="10" max="100"> </progress>
+                </div>
+              </div>
+            </div>
+
+            <div class="generalskills-video-div">
+              <div class="continue-watching-text top10skillstext">
+                Improve your Top 10 General Skills
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" role="img"
+                  aria-labelledby="ChevronRight3e39c339-1bed-4be8-ff4b-16c5b5cff856 ChevronRight3e39c339-1bed-4be8-ff4b-16c5b5cff856Desc"
+                  xmlns="http://www.w3.org/2000/svg" style="fill: #232121; height: 24px; width: 28px;">
+                  <polygon transform="translate(23.999500, 24.000000) scale(-1, 1) translate(-23.999500, -24.000000)"
+                    points="16 24 30.585 40 31.999 38.586 18.828 24 31.999 9.415 30.585 8" role="presentation">
+                  </polygon>
+                </svg>
+              </div>
+
+              <div class="top10videos">
+                <svg class="_ufjrdd" aria-hidden="true" focusable="false" viewBox="0 0 48 48" role="img"
+                  aria-labelledby="ChevronLeft3e39c339-1bed-4be8-ff4b-16c5b5cff856 ChevronLeft3e39c339-1bed-4be8-ff4b-16c5b5cff856Desc"
+                  xmlns="http://www.w3.org/2000/svg" style="fill: #ffffff; height: 44px; width: 36px;">
+                  <polygon transform="translate(23.999500, 24.000000) scale(1, -1) translate(-23.999500, -24.000000)"
+                    points="16 24 30.585 40 31.999 38.586 18.828 24 31.999 9.415 30.585 8" role="presentation">
+                  </polygon>
+                </svg>
+
+                <img class="top10videoscontent" src="{% static '/images/thumbnails/top10-1.png' %}" alt="" srcset="" width="160px"
+                  height="160">
+                <img class="top10videoscontent" src="{% static '/images/thumbnails/top10-2.png' %}" alt="" srcset="" width="160px"
+                  height="160">
+                <img class="top10videoscontent" src="{% static '/images/thumbnails/top10-3.png' %}" alt="" srcset="" width="160px"
+                  height="160">
+                <img class="top10videoscontent" src="{% static '/images/thumbnails/top10-4.png' %}" alt="" srcset="" width="160px"
+                  height="160">
+                <img class="top10videoscontent" src="{% static '/images/thumbnails/top10-5.png' %}" alt="" srcset="" width="160px"
+                  height="160">
+                <svg class="_ufjrdd" aria-hidden="true" focusable="false" viewBox="0 0 48 48" role="img"
+                  aria-labelledby="ChevronRight3e39c339-1bed-4be8-ff4b-16c5b5cff856 ChevronRight3e39c339-1bed-4be8-ff4b-16c5b5cff856Desc"
+                  xmlns="http://www.w3.org/2000/svg" style="fill: #ffffff; height: 44px; width: 36px;">
+                  <polygon transform="translate(23.999500, 24.000000) scale(-1, 1) translate(-23.999500, -24.000000)"
+                    points="16 24 30.585 40 31.999 38.586 18.828 24 31.999 9.415 30.585 8" role="presentation">
+                  </polygon>
+                </svg>
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
