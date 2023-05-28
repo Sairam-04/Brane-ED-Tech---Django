@@ -95,9 +95,6 @@ def Dashboard(request):
 def OtherActivities(request):
     return render(request, "base/otheractivities.html")
 
-def learningNetwork(request):
-    return render(request, "base/learningNetwork.html", {})
-
 def logoutUser(request):
     logout(request)
     return redirect("HomePage")

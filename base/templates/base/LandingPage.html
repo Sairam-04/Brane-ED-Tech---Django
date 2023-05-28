@@ -61,7 +61,7 @@
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Dynamic Timetable</a></li>
-                        <li><a class="dropdown-item" href="#">Blog</a></li>
+                        <li><a class="dropdown-item" href="{% url 'learningNetwork' %}">Blog</a></li>
                         <li><a class="dropdown-item" href="#">Settings</a></li>
                         <li><a class="dropdown-item" href="{% url 'Logout' %}">Logout</a></li>
                     </ul>
@@ -96,7 +96,7 @@
                             <li><a class="dropdown-item" href="#">Speaking</a></li>
                         </ul>
                     </li>
-                    <a class="nav-link active landing-home-hover" aria-current="page" href="#">Learning Network</a>
+                    <a class="nav-link active landing-home-hover" aria-current="page" href="{% url 'learningNetwork' %}">Learning Network</a>
                     <a class="nav-link active landing-home-hover" aria-current="page" href="#">General Search</a>
                     <a class="nav-link active landing-home-hover" aria-current="page" href="#">Little Masters</a>
                     <a class="nav-link active landing-home-hover" aria-current="page" href="{% url 'takeaclass' %}">Take your Lesson</a>
@@ -260,7 +260,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 my-3">
-                                <div class="car service service-3">
+                                <div class="car service service-3" onclick="learningNw()">
                                     <div class="car-body">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="80"
                                             viewBox="0 0 64.999 65">
@@ -364,19 +364,19 @@
                   <a href="#!" class="footer-text-color">Listening skills</a>
                 </li>
                 <li>
-                  <a href="#!" class="footer-text-color">General Search</a>
+                  <a href="#" class="footer-text-color">General Search</a>
                 </li>
                 <li>
                   <a href="#!" class="footer-text-color">Little Masters</a>
                 </li>
                 <li>
-                  <a href="/dashboard" class="footer-text-color">Dashboard</a>
+                  <a href="{% url 'Dashboard' %}" class="footer-text-color">Dashboard</a>
                 </li>
                 <li>
-                  <a href="/takelesson" class="footer-text-color">Ready to take class</a>
+                  <a href="{% url 'takeaclass' %}" class="footer-text-color">Ready to take class</a>
                 </li>
                 <li>
-                  <a href="/activites" class="footer-text-color">Other Activities</a>
+                  <a href="{% url 'OtherActivities' %}" class="footer-text-color">Other Activities</a>
                 </li>
               </ul>
             </div>
@@ -520,7 +520,13 @@
 
     <script>
         function dashboard() {
-            window.location.href = '/dashboard'
+          const route = "{% url 'Dashboard' %}"
+          window.location.href = route
+        }
+
+        function learningNw(){
+          const route = "{% url 'learningNetwork' %}"
+          window.location.href = route
         }
 
     </script>
