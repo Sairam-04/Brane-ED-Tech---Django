@@ -97,7 +97,7 @@
                         </ul>
                     </li>
                     <a class="nav-link active landing-home-hover" aria-current="page" href="{% url 'learningNetwork' %}">Learning Network</a>
-                    <a class="nav-link active landing-home-hover" aria-current="page" href="#">General Search</a>
+                    <a class="nav-link active landing-home-hover" aria-current="page" href="{% url 'generalSearch' %}">General Search</a>
                     <a class="nav-link active landing-home-hover" aria-current="page" href="#">Little Masters</a>
                     <a class="nav-link active landing-home-hover" aria-current="page" href="{% url 'takeaclass' %}">Take your Lesson</a>
                     <a class="nav-link active landing-home-hover" aria-current="page" href="{% url 'OtherActivities' %}">Other Activities</a>
@@ -308,7 +308,7 @@
                             </div>
                             <div class="col-md-4 my-3">
 
-                                <div class="car service service-6">
+                                <div class="car service service-6" onclick="generalsearch()">
                                     <div class="car-body">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="80"
                                             viewBox="0 0 78.385 70.967">
@@ -364,7 +364,7 @@
                   <a href="#!" class="footer-text-color">Listening skills</a>
                 </li>
                 <li>
-                  <a href="#" class="footer-text-color">General Search</a>
+                  <a href="{% url 'generalSearch' %}" class="footer-text-color">General Search</a>
                 </li>
                 <li>
                   <a href="#!" class="footer-text-color">Little Masters</a>
@@ -526,6 +526,11 @@
 
         function learningNw(){
           const route = "{% url 'learningNetwork' %}"
+          window.location.href = route
+        }
+
+        function generalsearch(){
+          const route = "{% url 'generalSearch' %}"
           window.location.href = route
         }
 

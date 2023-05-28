@@ -95,6 +95,14 @@ def Dashboard(request):
 def OtherActivities(request):
     return render(request, "base/otheractivities.html")
 
+@login_required(login_url="HomePage")
+def Game(request):
+    return render(request, "base/Game_template.html")
+
+@login_required(login_url="HomePage")
+def game_view(request):
+    return render(request, 'base/Game.html')
+
 def logoutUser(request):
     logout(request)
     return redirect("HomePage")

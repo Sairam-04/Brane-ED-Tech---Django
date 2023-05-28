@@ -13,6 +13,8 @@ urlpatterns = [
     path("dashboard/", views.Dashboard, name="Dashboard"),
     path("landingPage/", views.landingPage, name="landingPage"),
     path("otheractivities/", views.OtherActivities, name="OtherActivities"),
+    path("game/", views.Game, name="Game"),
+    path("game_view/", views.game_view, name="Game_view"),
     path("logout/", views.logoutUser, name="Logout"),
     path("", include('Blog.urls')),
     path("", include('generalSearch.urls')),

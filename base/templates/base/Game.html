@@ -1,0 +1,94 @@
+{% extends 'base/Main_template.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+  #game-container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background-image: url("{% static '/images/Game/bg.png'  %}");
+    background-size: cover;
+  }
+
+  #game-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  #cross-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  #game-over-image {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    z-index: 2;
+    width: 50px;
+    height: 100px;
+  }
+
+  #score-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    font-size: 24px;
+    color: white;
+  }
+  .game-container-div{
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px;
+
+  }
+  #stop-button{
+    margin-top: 20px;
+    width: 12%;
+    padding: 10px;
+    background-color: orange;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    font-size: 18px;
+  }
+</style>
+
+<div class="container-fluid container-bg-color">
+  <div class="row">
+      <div class="col-8 mx-auto pt-3 pb-5">
+          <div class="card rounded-0" style="background-color: #fff;">
+              <div class="card-body card-custom">
+                <div id="game-container">
+                  <canvas id="game-canvas" width="800" height="500"></canvas>
+                  <img id="cross-image" src="{% static '/images/Game/lose.png' %}" style="display: none;">
+                  <img id="game-over-image" src="{% static '/images/Game/Game-Over-PNG-Image.png' %}" style="display: none">
+                  <div id="score-container"></div>
+                </div>
+                <button id="stop-button">Stop</button>
+                  <audio id="bg-music" loop>
+                    <source src="bg.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                  </audio>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<script src="{% static '/js/game.js' %}"></script>
+<script>
+  window.addEventListener("load", startGame);
+</script>
+
+{% endblock content %}

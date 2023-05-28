@@ -179,7 +179,7 @@
                   <button type="button" class="btn btn-primary takeclass-btn">Experiments</button>
                   <button type="button" class="btn btn-primary takeclass-btn">Feature Enhancement</button>
                   <button type="button" class="btn btn-primary takeclass-btn">Animation</button>
-                  <button type="button" class="btn btn-primary takeclass-btn">Gamification</button>
+                  <button type="button" class="btn btn-primary takeclass-btn" onclick="PlayGame()">Gamification</button>
                   <button type="button" class="btn btn-primary takeclass-btn">Simulation</button>
                   <button type="button" class="btn btn-primary takeclass-btn">AR</button>
                   <button type="button" class="btn btn-primary takeclass-btn">VR</button>
@@ -278,6 +278,10 @@
   <script>
     function Assessment(){
         const route = "{% url 'takeAssessment' %}";
+        window.location.href = route;
+    }
+    function PlayGame(){
+      const route = "{% url 'Game' %}";
         window.location.href = route;
     }
   </script>

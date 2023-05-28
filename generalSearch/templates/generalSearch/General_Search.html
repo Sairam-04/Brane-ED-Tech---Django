@@ -8,17 +8,17 @@
     <div class="row sidebar-div">
         <div class="col-2 sidebar">
             <ul class="list-unstyled">
-                <li><a href="" class="gs-btn-custom"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
+                <li><a href="{% url 'Dashboard' %}" class="gs-btn-custom"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
                 <li><a href="" class="gs-btn-custom"><i class="fas fa-clock"></i> Dynamic Timetable</a></li>
                 <li><a href="" class="gs-btn-custom"><i class="fas fa-video"></i> Video Based Digital Library</a>
                 </li>
                 <li><a href="" class="gs-btn-custom"><i class="fas fa-spell-check"></i> Spelling Skills</a></li>
                 <li><a href="" class="gs-btn-custom"><i class="fas fa-memory"></i> Memory Skills</a></li>
                 <li><a href="" class="gs-btn-custom"><i class="fas fa-headphones"></i> Listening Skills</a></li>
-                <li><a href="" class="gs-btn-custom"><i class="far fa-edit"></i> Blog</a></li>
-                <li><a href="" class="gs-btn-custom"><i class="fas fa-search"></i> General Search</a></li>
+                <li><a href="{% url 'learningNetwork' %}" class="gs-btn-custom"><i class="far fa-edit"></i> Blog</a></li>
+                <li><a href="{% url 'generalSearch' %}" class="gs-btn-custom"><i class="fas fa-search"></i> General Search</a></li>
                 <li><a href="" class="gs-btn-custom"><i class="fas fa-child"></i> Little Masters</a></li>
-                <li><a href="" class="gs-btn-custom"><i class="fas fa-chalkboard"></i> Ready to Take Class</a></li>
+                <li><a href="{% url 'takeaclass' %}" class="gs-btn-custom"><i class="fas fa-chalkboard"></i> Ready to Take Class</a></li>
             </ul>
         </div>
 
@@ -42,7 +42,12 @@
                 <div class="gs-results hidden">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laboriosam, quia perspiciatis illo animi aut deserunt in excepturi, corrupti distinctio quidem ratione voluptatem? Repellat similique, provident aliquid nisi quae porro praesentium unde iusto culpa aspernatur ab officia repudiandae explicabo, iure inventore labore dolorum consequatur asperiores quidem sed? Qui placeat, aperiam unde facilis dolor, enim eos maxime repellendus in expedita a quidem natus officiis? Eos cumque consequatur eligendi ullam animi ea officiis alias accusamus recusandae veniam cupiditate illum reprehenderit optio libero quos nisi, dolore inventore modi mollitia nihil voluptates, iste ut. Qui tenetur animi ut ad quam non est dolor esse!
                 </div>
-                <video id="gs-video" autoplay controls>
+
+                <!-- <video id="gs-video" width="300" height="200" autoplay controls>
+                    <source src="{% static '/videos/Final-1.mp4' %}" type="video/mp4" />
+                  </video> -->
+
+                <video id="gs-video" autoplay>
                     <source src="{% static '/videos/Final-1.mp4' %}">
                 </video>
             </div>
