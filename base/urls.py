@@ -15,4 +15,5 @@ urlpatterns = [
     path("otheractivities/", views.OtherActivities, name="OtherActivities"),
     path("logout/", views.logoutUser, name="Logout"),
     path("", include('Blog.urls')),
+    path("", include('generalSearch.urls')),
 ]
