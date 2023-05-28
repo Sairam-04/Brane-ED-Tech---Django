@@ -1,0 +1,191 @@
+{% extends "base/Main_template.html" %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid takeclass-bg-color">
+    <div class="row main-container">
+        <div class="col-9 mx-auto ml-1.5 mr-1.5">
+            <div class="take-a-class-container">
+                <div class="class-video">
+                    <video class="main-video" src="{% static '/videos/learningnw-video-1.mp4' %}" autoplay muted></video>
+                </div>
+                <div class="learningnw-badge">
+                    Home
+                    <svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" role="img"
+                        aria-labelledby="ChevronRight3e39c339-1bed-4be8-ff4b-16c5b5cff856 ChevronRight3e39c339-1bed-4be8-ff4b-16c5b5cff856Desc"
+                        xmlns="http://www.w3.org/2000/svg" style="fill: #5d5d5d; height: 30px; width: 28px">
+                        <polygon
+                            transform="translate(23.999500, 24.000000) scale(-1, 1) translate(-23.999500, -24.000000)"
+                            points="16 24 30.585 40 31.999 38.586 18.828 24 31.999 9.415 30.585 8" role="presentation">
+                        </polygon>
+                    </svg>
+                    Learning Network
+                </div>
+
+                <div id="questions-content">
+                    <div>Solve the Questions</div>
+                    <div id="filters">Filters</div>
+                </div>
+
+                <div>
+                    <ul class="col-12 questions-list">
+                        <li class="question-item">
+                            <div>
+                                1). Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry?
+                            </div>
+                            <div>
+                                <a href="#">Answer</a>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div>
+                                2). It was popularised in the 1960s with the release of Letraset
+                                sheets containing Lorem Ipsum desktop publishing?
+                            </div>
+                            <div>
+                                <a href="#">Answer</a>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div>
+                                3). The point of using Lorem Ipsum is that it has a more-or-less
+                                normal distribution of letters?
+                            </div>
+                            <div>
+                                <a href="#">Answer</a>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div>
+                                4). Many desktop publishing packages and web page editors now
+                                use Lorem Ipsum as their default model text?
+                            </div>
+                            <div>
+                                <a href="#">Answer</a>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div>
+                                5). Many desktop publishing packages and web page editors now
+                                use Lorem Ipsum as their default model text?
+                            </div>
+                            <div>
+                                <a href="#">Answer</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <nav class="d-flex justify-content-end px-2">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#">1 of 15</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">
+                                        < </span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true"> > </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="question-form-title">Ask a Question ?</div>
+                <div class="row question-form-main-div">
+                    <div class="col-md-8">
+                        <!-- Form goes here -->
+                        <div class="question-form-div">
+                            <div class="question-form">
+                                <form action="" method="post">
+                                    <!-- Form content -->
+                                    <div>
+                                        <ul class="list-unstyled">
+                                            <li class="row lnw-question-inputs">
+                                                <div class="col-2">
+                                                    <label for="Curriculum">Curriculum</label>
+                                                </div>
+                                                <div class="col-10">
+                                                    <select id="Curriculum" name="Curriculum">
+                                                        <option value="Option1">Option1</option>
+                                                        <option value="Option2">Option2</option>
+                                                        <option value="Option3">Option3</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li class="row lnw-question-inputs">
+                                                <div class="col-2">
+                                                    <label for="Class">Class</label>
+                                                </div>
+                                                <div class="col-10">
+                                                    <select id="Class" name="Class">
+                                                        <option value="Option1">Option1</option>
+                                                        <option value="Option2">Option2</option>
+                                                        <option value="Option3">Option3</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li class="row lnw-question-inputs">
+                                                <div class="col-2">
+                                                    <label for="Subject">Subject</label>
+                                                </div>
+                                                <div class="col-10">
+                                                    <select id="Subject" name="Subject">
+                                                        <option value="Option1">Option1</option>
+                                                        <option value="Option2">Option2</option>
+                                                        <option value="Option3">Option3</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li class="row lnw-question-inputs">
+                                                <div class="col-2">
+                                                    <label for="question">Question</label>
+                                                </div>
+                                                <div class="col-10">
+                                                    <textarea name="question" id="question"></textarea>
+
+                                                    <button class="btn-secondary icon-user"><i
+                                                            class="bi bi-mic-fill"></i></i></button>
+                                                    <button class="btn-secondary icon-user"><i
+                                                            class="bi bi-paperclip"></i></button>
+                                                    <button class="btn-secondary icon-user"><i
+                                                            class="bi bi-link-45deg"></i></button>
+
+                                                </div>
+                                            </li>
+                                            <li id="question-form-button">
+                                                <button type="submit" class="btn assessment-btn" data-toggle="modal"
+                                                    data-target="#myModal">Upload</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 question-form-img-div">
+                        <!-- Image goes here -->
+                        <img id="question-form-img" src="{% static '/images/question-from-img2.png' %}" alt="..."
+                            srcset="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const textarea = document.getElementById('question');
+
+    textarea.addEventListener('input', () => {
+        textarea.style.height = 'auto'; // Reset the height to auto
+        textarea.style.height = textarea.scrollHeight + 'px'; // Set the height based on content
+    });
+</script>
+
+{% endblock content %}
