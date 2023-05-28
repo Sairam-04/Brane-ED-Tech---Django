@@ -29,51 +29,16 @@
 
                 <div>
                     <ul class="col-12 questions-list">
-                        <li class="question-item">
-                            <div>
-                                1). Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry?
-                            </div>
-                            <div>
-                                <a href="#">Answer</a>
-                            </div>
-                        </li>
-                        <li class="question-item">
-                            <div>
-                                2). It was popularised in the 1960s with the release of Letraset
-                                sheets containing Lorem Ipsum desktop publishing?
-                            </div>
-                            <div>
-                                <a href="#">Answer</a>
-                            </div>
-                        </li>
-                        <li class="question-item">
-                            <div>
-                                3). The point of using Lorem Ipsum is that it has a more-or-less
-                                normal distribution of letters?
-                            </div>
-                            <div>
-                                <a href="#">Answer</a>
-                            </div>
-                        </li>
-                        <li class="question-item">
-                            <div>
-                                4). Many desktop publishing packages and web page editors now
-                                use Lorem Ipsum as their default model text?
-                            </div>
-                            <div>
-                                <a href="#">Answer</a>
-                            </div>
-                        </li>
-                        <li class="question-item">
-                            <div>
-                                5). Many desktop publishing packages and web page editors now
-                                use Lorem Ipsum as their default model text?
-                            </div>
-                            <div>
-                                <a href="#">Answer</a>
-                            </div>
-                        </li>
+                        {% for question in questions %}
+                            <li class="question-item">
+                                <div>
+                                    {{forloop.counter}}. {{question.question}}
+                                </div>
+                                <div>
+                                    <a href="#">Answer</a>
+                                </div>
+                            </li>
+                        {% endfor %}
                     </ul>
                     <nav class="d-flex justify-content-end px-2">
                         <ul class="pagination">
@@ -101,19 +66,20 @@
                         <!-- Form goes here -->
                         <div class="question-form-div">
                             <div class="question-form">
-                                <form action="" method="post">
+                                <form action="{% url 'learningNetwork' %}" method="post">
+                                    {% csrf_token %}
                                     <!-- Form content -->
                                     <div>
                                         <ul class="list-unstyled">
                                             <li class="row lnw-question-inputs">
                                                 <div class="col-2">
-                                                    <label for="Curriculum">Curriculum</label>
+                                                    <label for="Syllabus">Syllabus</label>
                                                 </div>
                                                 <div class="col-10">
-                                                    <select id="Curriculum" name="Curriculum">
-                                                        <option value="Option1">Option1</option>
-                                                        <option value="Option2">Option2</option>
-                                                        <option value="Option3">Option3</option>
+                                                    <select id="Syllabus" name="syllabus">
+                                                        {% for syllabus_choice_display, syllabus_choice_value in syllabus_choices %}
+                                                            <option value="{{ syllabus_choice }}">{{ syllabus_choice_display }}</option>
+                                                        {% endfor %}
                                                     </select>
                                                 </div>
                                             </li>
@@ -122,10 +88,10 @@
                                                     <label for="Class">Class</label>
                                                 </div>
                                                 <div class="col-10">
-                                                    <select id="Class" name="Class">
-                                                        <option value="Option1">Option1</option>
-                                                        <option value="Option2">Option2</option>
-                                                        <option value="Option3">Option3</option>
+                                                    <select id="Class" name="class">
+                                                        {% for class_choice_display, class_choice_value in class_choices %}
+                                                            <option value="{{ class_choice }}">{{ class_choice_display }}</option>
+                                                        {% endfor %}
                                                     </select>
                                                 </div>
                                             </li>
@@ -134,11 +100,19 @@
                                                     <label for="Subject">Subject</label>
                                                 </div>
                                                 <div class="col-10">
-                                                    <select id="Subject" name="Subject">
-                                                        <option value="Option1">Option1</option>
-                                                        <option value="Option2">Option2</option>
-                                                        <option value="Option3">Option3</option>
+                                                    <select id="Subject" name="subject">
+                                                        {% for subject_choice_display, subject_choice_value in subject_choices %}
+                                                            <option value="{{ subject_choice }}">{{ subject_choice_display }}</option>
+                                                        {% endfor %}
                                                     </select>
+                                                </div>
+                                            </li>
+                                            <li class="row lnw-question-inputs">
+                                                <div class="col-2">
+                                                    <label for="topic">Topic</label>
+                                                </div>
+                                                <div class="col-10">
+                                                    <input type="text" name="topic" id="topic">
                                                 </div>
                                             </li>
                                             <li class="row lnw-question-inputs">
@@ -158,8 +132,7 @@
                                                 </div>
                                             </li>
                                             <li id="question-form-button">
-                                                <button type="submit" class="btn assessment-btn" data-toggle="modal"
-                                                    data-target="#myModal">Upload</button>
+                                                <button type="submit" class="btn assessment-btn" name="form_submitted" value="True">Upload</button>
                                             </li>
                                         </ul>
                                     </div>
@@ -179,6 +152,35 @@
     </div>
 </div>
 
+{% if form_submitted %}
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+        <!-- Modal content-->
+        <div class="modal-content">
+            
+            <div class="modal-body">
+            <img src="{% static '/images/checkicon.png' %}" alt="Successful image">
+            
+            <p class="modalmessage">Successfully Uploaded the Question !!</p>
+            </div>
+
+            <div class="modal-footer">
+                
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Continue</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#myModal').modal('show');
+        });
+    </script>
+{% endif %}
+
 <script>
     const textarea = document.getElementById('question');
 
@@ -186,6 +188,8 @@
         textarea.style.height = 'auto'; // Reset the height to auto
         textarea.style.height = textarea.scrollHeight + 'px'; // Set the height based on content
     });
+
+    
 </script>
 
 {% endblock content %}

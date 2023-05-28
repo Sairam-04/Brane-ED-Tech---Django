@@ -675,4 +675,9 @@ textarea {
   align-items: center;
 }
 
+#topic{
+  width: 100%;
+  padding: .25rem;
+}
+
 /* Learning Network Styling */
