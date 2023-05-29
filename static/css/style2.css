@@ -653,7 +653,7 @@ textarea {
 .icon-user{
   position: relative;
   top: -40px;
-  left: 372px;
+  left: 343px;
   border: 1px solid rgb(69, 67, 67);
   border-radius: 50%;
 
@@ -696,7 +696,7 @@ textarea {
   border: 1px solid black;
   border-top-left-radius: 5px; 
   border-bottom-left-radius: 5px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .gs-content{
@@ -743,7 +743,8 @@ textarea {
   border: 2px solid black;
   margin-top: 45px;
   width: 80%;
-  margin-left: 80px;
+  margin-left: 53px;
+  height: 20vh;
 }
 
 /* 

@@ -3,6 +3,9 @@
 
 {% block content %}
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="{% static '/js/rapidapi.js' %}"></script>
+
 
 <div class="container-fluid">
     <div class="row sidebar-div">
@@ -27,7 +30,7 @@
                 <div class="search-container">
                     <form class="search-bar-gs hidden" role="search" style="padding-left: 14px;">
                         <i class="fas fa-search search-icon"></i>
-                        <input class="search-input" type="text" name="search" id="search"
+                        <input class="search-input" type="text" name="search" id="gssearch"
                             placeholder="What are you looking for?" />
                         <span id="micIcon" onclick="handleMicIconClick()">
                         <i class="fas fa-microphone mic-icon"></i>
@@ -40,7 +43,7 @@
                 </div>
 
                 <div class="gs-results hidden">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laboriosam, quia perspiciatis illo animi aut deserunt in excepturi, corrupti distinctio quidem ratione voluptatem? Repellat similique, provident aliquid nisi quae porro praesentium unde iusto culpa aspernatur ab officia repudiandae explicabo, iure inventore labore dolorum consequatur asperiores quidem sed? Qui placeat, aperiam unde facilis dolor, enim eos maxime repellendus in expedita a quidem natus officiis? Eos cumque consequatur eligendi ullam animi ea officiis alias accusamus recusandae veniam cupiditate illum reprehenderit optio libero quos nisi, dolore inventore modi mollitia nihil voluptates, iste ut. Qui tenetur animi ut ad quam non est dolor esse!
+                    <p id="gs-response"></p>
                 </div>
 
                 <!-- <video id="gs-video" width="300" height="200" autoplay controls>
@@ -54,26 +57,27 @@
         </div>
     </div>
 
+    <script>
+        var video = document.getElementById("gs-video");
+        var searchForm = document.querySelector(".search-bar-gs");
+        var container = document.getElementById("three-js-container");
+        var gsResults = document.querySelector(".gs-results");
+    
+        video.addEventListener("canplaythrough", function() {
+            video.play();
+        });
+    
+        video.addEventListener("ended", function() {
+            video.style.display = "none";
+            searchForm.classList.remove("hidden");
+            gsResults.classList.remove("hidden");
+            container.style.backgroundImage = "url('images/back.svg')";
+            container.style.backgroundColor = "";
+        });
+    
+    </script>
+
 </div>
 
-<script>
-    var video = document.getElementById("gs-video");
-    var searchForm = document.querySelector(".search-bar-gs");
-    var container = document.getElementById("three-js-container");
-    var gsResults = document.querySelector(".gs-results");
-
-    video.addEventListener("canplaythrough", function() {
-        video.play();
-    });
-
-    video.addEventListener("ended", function() {
-        video.style.display = "none";
-        searchForm.classList.remove("hidden");
-        gsResults.classList.remove("hidden");
-        container.style.backgroundImage = "url('images/back.svg')";
-        container.style.backgroundColor = "";
-    });
-
-</script>
 
 {% endblock content%}
