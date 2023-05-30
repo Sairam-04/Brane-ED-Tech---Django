@@ -1,4 +1,3 @@
-
 {% extends 'base/Main_template.html' %}
 {% load static %}
 
@@ -15,7 +14,9 @@
 
   #page-container {
     position: relative;
-    background-image: url("{% static '/images/Game/main-image.png' %}");
+    background-image: url("{% static '/images/Game/start_bgg.png' %}");
+    background-position: center;
+    background-size: cover;
     width: 800px;
     height: 500px;
   }
@@ -62,11 +63,10 @@
           <div class="card rounded-0" style="background-color: #fff;">
               <div class="card-body card-custom">
                 <div id="page-container">
-                  <img id="logo" src="{% static '/images/Game/black.png' %}" alt="Logo">
+     
                   <div id="image-container">
-                    <img id="small-image" src="{% static '/images/Game/image-top.png' %}" alt="Small Image">
+                    <img id="small-image" src="{% static '/images/Game/image-top.png'%}" alt="Small Image">
                   </div>
-                </div>
                 <button id="start-button">Start</button>    
               </div>
           </div>
@@ -82,4 +82,3 @@
 </script>
 
 {% endblock content %}
-
